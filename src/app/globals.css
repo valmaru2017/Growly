@@ -27,6 +27,10 @@ body {
   font-family: 'General Sans', sans-serif;
 }
 
+.font-space-mono {
+  font-family: 'Space Mono', monospace;
+}
+
 .bg-grid {
   background-image:
     linear-gradient(#ececec 1px, transparent 1px),

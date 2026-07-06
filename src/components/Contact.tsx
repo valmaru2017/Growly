@@ -16,19 +16,18 @@ export default function Contact() {
 
   return (
     <>
-      {/* Cinematic transition */}
+      {/* Cinematic transition — gray (previous section) to the grid background below */}
       <div
         aria-hidden="true"
-        className="h-[14vh] sm:h-[18vh] lg:h-[22vh]"
+        className="h-[8vh] sm:h-[10vh] lg:h-[12vh]"
         style={{
-          background:
-            "linear-gradient(to bottom, #0B0B0B 0%, #3a3a38 38%, #8c8c88 60%, #d8d8d4 82%, #f8f8f6 100%)",
+          background: "linear-gradient(to bottom, #E4E3DF 0%, #f8f8f6 100%)",
         }}
       />
 
       <section
         id="contacto"
-        className="relative overflow-hidden bg-background px-6 py-16 sm:px-8 lg:px-12 lg:py-28"
+        className="relative overflow-hidden bg-background px-6 pt-8 pb-16 sm:px-8 lg:px-12 lg:pt-12 lg:pb-28"
     >
       <div className="bg-grid pointer-events-none absolute inset-0 opacity-40" />
 
@@ -43,7 +42,7 @@ export default function Contact() {
           Empecemos
         </span>
 
-        <h2 className="font-general-sans mt-6 text-[clamp(28px,7vw,48px)] leading-[1.1] font-extrabold tracking-[-0.01em] lg:text-5xl">
+        <h2 className="font-general-sans mt-6 text-[clamp(32px,8vw,56px)] leading-[1.1] font-extrabold tracking-[-0.01em] lg:text-5xl">
           Hablemos de cómo{" "}
           <span className="text-growly-accent">quieres que te vean</span>
         </h2>

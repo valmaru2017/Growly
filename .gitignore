@@ -42,3 +42,6 @@ next-env.d.ts
 
 # stray debug screenshots left at repo root during development
 /*.png
+
+.vercel
+.env*

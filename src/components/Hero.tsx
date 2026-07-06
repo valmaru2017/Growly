@@ -170,7 +170,7 @@ export default function Hero() {
               </span>
 
               <motion.h1
-                className="font-general-sans mt-6 text-left text-[clamp(38px,8vw,72px)] leading-[1.05] font-bold tracking-[-0.01em] lg:leading-[1.02]"
+                className="font-general-sans mt-6 text-left text-[clamp(42px,9vw,84px)] leading-[1.05] font-bold tracking-[-0.01em] lg:text-[clamp(38px,8vw,72px)] lg:leading-[1.02]"
                 initial={reduceMotion ? undefined : "hidden"}
                 whileInView={reduceMotion ? undefined : "show"}
                 viewport={{ once: true }}

@@ -41,7 +41,7 @@ export default function TheTransformation() {
           </div>
 
           {/* Headline */}
-          <h2 className="font-general-sans mt-4 text-left text-[clamp(30px,8vw,48px)] leading-[1.08] font-extrabold text-white lg:text-5xl">
+          <h2 className="font-general-sans mt-4 text-left text-[clamp(34px,9.5vw,56px)] leading-[1.08] font-extrabold text-white lg:text-5xl">
             Cuando todo se alinea,{" "}
             <span className="text-growly-accent">tu negocio evoluciona</span>
           </h2>
@@ -53,7 +53,7 @@ export default function TheTransformation() {
           className="flex justify-center overflow-hidden lg:order-last"
         >
           <motion.div
-            className="w-full max-w-sm sm:max-w-lg lg:max-w-none"
+            className="w-full max-w-sm bg-[#0B0B0B] sm:max-w-lg lg:max-w-none"
             style={
               reduceMotion
                 ? undefined
@@ -70,7 +70,7 @@ export default function TheTransformation() {
               width={1023}
               height={1537}
               sizes="(min-width: 1024px) 480px, 90vw"
-              className="h-auto w-full"
+              className="h-auto w-full mix-blend-screen"
             />
           </motion.div>
         </div>

@@ -29,7 +29,7 @@ export default function ThePerception() {
           </div>
 
           {/* Headline */}
-          <h2 className="font-general-sans mt-4 text-left text-[clamp(30px,8vw,48px)] leading-[1.08] font-extrabold text-white lg:text-5xl">
+          <h2 className="font-general-sans mt-4 text-left text-[clamp(34px,9.5vw,56px)] leading-[1.08] font-extrabold text-white lg:text-5xl">
             La diferencia no es tu trabajo,{" "}
             <span className="text-growly-accent">es cómo lo perciben</span>
           </h2>
@@ -44,6 +44,7 @@ export default function ThePerception() {
           transition={{ duration: 0.7, ease: EASE, delay: 0.1 }}
         >
           <motion.div
+            className="bg-[#0B0B0B]"
             animate={reduceMotion ? undefined : { y: [0, -10, 0] }}
             transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
           >
@@ -53,7 +54,7 @@ export default function ThePerception() {
               width={926}
               height={1451}
               sizes="(min-width: 1024px) 460px, 90vw"
-              className="h-auto w-full max-w-[340px] sm:max-w-[400px] lg:max-w-[460px]"
+              className="h-auto w-full max-w-[340px] mix-blend-screen sm:max-w-[400px] lg:max-w-[460px]"
             />
           </motion.div>
         </motion.div>

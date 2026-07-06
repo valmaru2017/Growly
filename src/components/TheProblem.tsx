@@ -20,7 +20,7 @@ function IntroCopy() {
         </p>
       </div>
 
-      <h2 className="font-general-sans mt-4 mb-2 text-left text-[clamp(28px,7vw,48px)] leading-[1.1] font-extrabold text-white lg:text-5xl">
+      <h2 className="font-general-sans mt-4 mb-2 text-left text-[clamp(32px,8vw,56px)] leading-[1.1] font-extrabold text-white lg:text-5xl">
         Muchos negocios online se ven así
       </h2>
 

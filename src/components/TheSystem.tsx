@@ -82,7 +82,7 @@ export default function TheSystem() {
           </div>
 
           {/* Headline */}
-          <h2 className="font-general-sans mt-4 text-left text-[clamp(30px,8vw,48px)] leading-[1.08] font-extrabold text-white lg:text-5xl">
+          <h2 className="font-general-sans mt-4 text-left text-[clamp(34px,9.5vw,56px)] leading-[1.08] font-extrabold text-white lg:text-5xl">
             Un <span className="text-growly-accent">sistema</span> que trabaja
             por tu negocio
           </h2>
