@@ -1,4 +1,4 @@
-import type { FormState } from "@/app/audit-tool/page";
+import type { FormState } from "@/app/growly-internal-v7x9k2/page";
 
 export type SectionResult = {
   title: string;

@@ -1,7 +1,7 @@
 "use client";
 
 import { useSearchParams } from "next/navigation";
-import type { FormState } from "@/app/audit-tool/page";
+import type { FormState } from "@/app/growly-internal-v7x9k2/page";
 import { computeAudit, type SectionResult } from "@/lib/auditScoring";
 
 const PRINT_STYLES = `
@@ -93,11 +93,8 @@ export default function ReportContent() {
     return (
       <div className="flex min-h-dvh items-center justify-center bg-background px-6 text-center">
         <p className="font-sans text-foreground">
-          No se encontraron datos del reporte. Vuelve a{" "}
-          <a href="/audit-tool" className="text-growly-accent underline">
-            /audit-tool
-          </a>{" "}
-          y genera el reporte de nuevo.
+          No se encontraron datos del reporte. Vuelve a la herramienta de
+          auditoría y genera el reporte de nuevo.
         </p>
       </div>
     );
