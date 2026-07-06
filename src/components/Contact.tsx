@@ -54,9 +54,7 @@ export default function Contact() {
 
         <div className="mt-8 flex justify-center">
           <motion.a
-            href={whatsappHref(
-              "Hola, quiero hablar sobre mi negocio y mi presencia online",
-            )}
+            href={whatsappHref("Hola, quiero mi revisión gratuita")}
             target="_blank"
             rel="noopener noreferrer"
             className="font-general-sans inline-flex h-14 w-fit cursor-pointer items-center justify-center gap-3 whitespace-nowrap rounded-full bg-growly-accent px-8 text-[15px] font-semibold tracking-[-0.01em] text-white shadow-[0_1px_0_rgba(255,255,255,.04)_inset,0_10px_30px_rgba(0,0,0,.08)]"
