@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Growly — Nuestros Paquetes</title>
+<link href="https://api.fontshare.com/v2/css?f[]=general-sans@300,400,500,600,700,800&display=swap" rel="stylesheet"/>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+@page{size:A4 portrait;margin:0}
+
+body{
+  font-family:'General Sans', sans-serif;
+  background:#F8F8F6;
+  color:#111111;
+  -webkit-font-smoothing:antialiased;
+  min-height:100vh;
+  padding:40px;
+}
+
+.page{
+  max-width:900px;
+  margin:0 auto;
+  background:#F8F8F6;
+}
+
+.header{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  margin-bottom:36px;
+  padding-bottom:24px;
+  border-bottom:1px solid #E0DDD8;
+}
+.logo{
+  font-family:'General Sans', sans-serif;
+  font-size:18px;
+  font-weight:600;
+  color:#111111;
+  letter-spacing:.06em;
+}
+.logo span{color:#B33A2F}
+.tagline{
+  font-size:11px;
+  font-weight:500;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  color:#888;
+}
+
+.hero{
+  text-align:center;
+  margin-bottom:40px;
+}
+.hero h1{
+  font-family:'General Sans', sans-serif;
+  font-size:54px;
+  font-weight:800;
+  line-height:1.05;
+  letter-spacing:-.03em;
+  margin-bottom:10px;
+}
+.hero h1 em{
+  font-style:normal;
+  color:#111111;
+}
+.hero p{
+  font-size:15px;
+  color:#666;
+  font-weight:300;
+  max-width:480px;
+  margin:0 auto;
+  line-height:1.6;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:1fr 1fr 1fr;
+  gap:16px;
+  margin-bottom:32px;
+}
+
+.card{
+  background:#fff;
+  border:1px solid #E0DDD8;
+  border-radius:12px;
+  overflow:hidden;
+  display:flex;
+  flex-direction:column;
+}
+.card.featured{
+  background:#111111;
+  border-color:#111111;
+}
+.card-header{
+  padding:24px 24px 16px;
+  border-bottom:1px solid #F0EDE8;
+}
+.card.featured .card-header{
+  border-bottom-color:rgba(255,255,255,.1);
+}
+.card-tag{
+  font-size:10px;
+  font-weight:600;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  color:#B33A2F;
+  margin-bottom:8px;
+  display:block;
+}
+.card-name{
+  font-family:'General Sans', sans-serif;
+  font-size:22px;
+  font-weight:700;
+  color:#111111;
+  margin-bottom:4px;
+  line-height:1.1;
+  letter-spacing:-.02em;
+}
+.card.featured .card-name{color:#fff}
+.card-desc{
+  font-size:12px;
+  color:#888;
+  line-height:1.5;
+  font-weight:300;
+}
+.card.featured .card-desc{color:rgba(255,255,255,.5)}
+.card-body{
+  padding:20px 24px;
+  flex:1;
+}
+.check-item{
+  display:flex;
+  align-items:flex-start;
+  gap:10px;
+  margin-bottom:11px;
+  font-size:13px;
+  color:#333;
+  line-height:1.4;
+  font-weight:300;
+}
+.card.featured .check-item{color:rgba(255,255,255,.8)}
+.check-item:last-child{margin-bottom:0}
+.check-icon{
+  flex-shrink:0;
+  width:18px;
+  height:18px;
+  border-radius:50%;
+  background:#F0EDE8;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin-top:1px;
+}
+.card.featured .check-icon{background:rgba(255,255,255,.1)}
+.check-icon svg{width:9px;height:9px}
+.card-footer{
+  padding:20px 24px 24px;
+  border-top:1px solid #F0EDE8;
+}
+.card.featured .card-footer{border-top-color:rgba(255,255,255,.1)}
+.price-label{
+  font-size:10px;
+  font-weight:600;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+  color:#888;
+  margin-bottom:4px;
+}
+.card.featured .price-label{color:rgba(255,255,255,.4)}
+.price{
+  font-family:'General Sans', sans-serif;
+  font-size:40px;
+  font-weight:800;
+  color:#111111;
+  line-height:1;
+  letter-spacing:-.03em;
+}
+.card.featured .price{color:#fff}
+.price sup{
+  font-size:20px;
+  font-weight:600;
+  vertical-align:super;
+}
+.price-note{
+  font-size:11px;
+  color:#888;
+  margin-top:4px;
+  font-weight:300;
+}
+.card.featured .price-note{color:rgba(255,255,255,.4)}
+
+.popular-badge{
+  display:inline-flex;
+  align-items:center;
+  gap:5px;
+  background:#B33A2F;
+  color:#fff;
+  font-size:10px;
+  font-weight:600;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  padding:4px 10px;
+  border-radius:99px;
+  margin-bottom:12px;
+}
+
+.note{
+  text-align:center;
+  font-size:12px;
+  color:#888;
+  line-height:1.6;
+  padding:20px;
+  background:#fff;
+  border:1px solid #E0DDD8;
+  border-radius:10px;
+  margin-bottom:24px;
+  font-weight:300;
+}
+.note strong{color:#111;font-weight:500}
+
+.footer{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding-top:20px;
+  border-top:1px solid #E0DDD8;
+}
+.footer-logo{
+  font-family:'General Sans', sans-serif;
+  font-size:14px;
+  font-weight:600;
+  color:#111;
+  letter-spacing:.06em;
+}
+.footer-logo span{color:#B33A2F}
+.footer-contact{
+  font-size:12px;
+  color:#888;
+  text-align:right;
+  font-weight:300;
+}
+.footer-contact a{color:#B33A2F;text-decoration:none}
+
+@media print{
+  body{padding:28px;background:#F8F8F6}
+  .page{max-width:100%}
+  .no-print{display:none!important}
+  .card{break-inside:avoid}
+}
+
+.print-btn{
+  position:fixed;
+  bottom:24px;
+  right:24px;
+  background:#B33A2F;
+  color:#fff;
+  border:none;
+  border-radius:8px;
+  padding:12px 24px;
+  font-family:'General Sans', sans-serif;
+  font-size:14px;
+  font-weight:600;
+  cursor:pointer;
+  display:flex;
+  align-items:center;
+  gap:8px;
+  box-shadow:0 4px 20px rgba(179,58,47,.35);
+  transition:opacity .15s;
+}
+.print-btn:hover{opacity:.88}
+</style>
+</head>
+<body>
+
+<button class="print-btn no-print" onclick="window.print()">
+  <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M6 9V2h12v7"/><path d="M6 18H4a2 2 0 01-2-2v-5a2 2 0 012-2h16a2 2 0 012 2v5a2 2 0 01-2 2h-2"/><path d="M6 14h12v8H6z"/></svg>
+  Descargar PDF
+</button>
+
+<div class="page">
+
+  <div class="header">
+    <div class="logo">GROWLY<span>•</span></div>
+    <div class="tagline">Estudio de crecimiento digital</div>
+  </div>
+
+  <div class="hero">
+    <h1>Nuestros <em>paquetes</em></h1>
+    <p>Soluciones diseñadas para que tu negocio se vea tan profesional como el trabajo que realiza.</p>
+  </div>
+
+  <div class="grid">
+
+    <!-- ESENCIAL -->
+    <div class="card">
+      <div class="card-header">
+        <span class="card-tag">Esencial</span>
+        <div class="card-name">Identidad Visual</div>
+        <div class="card-desc">Para negocios que necesitan una imagen profesional desde cero.</div>
+      </div>
+      <div class="card-body">
+        <div class="check-item">
+          <div class="check-icon"><svg viewBox="0 0 10 10" fill="none" stroke="#B33A2F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="1.5,5 4,7.5 8.5,2.5"/></svg></div>
+          Logo profesional (3 conceptos)
+        </div>
+        <div class="check-item">
+          <div class="check-icon"><svg viewBox="0 0 10 10" fill="none" stroke="#B33A2F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="1.5,5 4,7.5 8.5,2.5"/></svg></div>
+          Paleta de colores + tipografía
+        </div>
+        <div class="check-item">
+          <div class="check-icon"><svg viewBox="0 0 10 10" fill="none" stroke="#B33A2F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="1.5,5 4,7.5 8.5,2.5"/></svg></div>
+          Todas las versiones del logo
+        </div>
+        <div class="check-item">
+          <div class="check-icon"><svg viewBox="0 0 10 10" fill="none" stroke="#B33A2F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="1.5,5 4,7.5 8.5,2.5"/></svg></div>
+          Diseño de tarjeta de presentación
+        </div>
+        <div class="check-item">
+          <div class="check-icon"><svg viewBox="0 0 10 10" fill="none" stroke="#B33A2F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="1.5,5 4,7.5 8.5,2.5"/></svg></div>
+          Plantilla de factura con tu marca
+        </div>
+        <div class="check-item">
+          <div class="check-icon"><svg viewBox="0 0 10 10" fill="none" stroke="#B33A2F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="1.5,5 4,7.5 8.5,2.5"/></svg></div>
+          Mini guía de marca (1 página)
+        </div>
+        <div class="check-item">
+          <div class="check-icon"><svg viewBox="0 0 10 10" fill="none" stroke="#B33A2F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="1.5,5 4,7.5 8.5,2.5"/></svg></div>
+          Archivos en todos los formatos
+        </div>
+      </div>
+      <div class="card-footer">
+        <div class="price-label">Inversión</div>
+        <div class="price"><sup>$</sup>799</div>
+        <div class="price-note">Pago único · Sin mensualidades</div>
+      </div>
+    </div>
+
+    <!-- CRECIMIENTO (FEATURED) -->
+    <div class="card featured">
+      <div class="card-header">
+        <div class="popular-badge">
+          <svg width="9" height="9" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          Más elegido
+        </div>
+        <span class="card-tag">Crecimiento</span>
+        <div class="card-name">Presencia Digital</div>
+        <div class="card-desc">Para negocios que quieren verse completos y profesionales online.</div>
+      </div>
+      <div class="card-body">
+        <div class="check-item">
+          <div class="check-icon"><svg viewBox="0 0 10 10" fill="none" stroke="rgba(255,255,255,.8)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="1.5,5 4,7.5 8.5,2.5"/></svg></div>
+          Todo lo del paquete Esencial
+        </div>
+        <div class="check-item">
+          <div class="check-icon"><svg viewBox="0 0 10 10" fill="none" stroke="rgba(255,255,255,.8)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="1.5,5 4,7.5 8.5,2.5"/></svg></div>
+          Landing page profesional
+        </div>
+        <div class="check-item">
+          <div class="check-icon"><svg viewBox="0 0 10 10" fill="none" stroke="rgba(255,255,255,.8)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="1.5,5 4,7.5 8.5,2.5"/></svg></div>
+          Google Business optimizado
+        </div>
+        <div class="check-item">
+          <div class="check-icon"><svg viewBox="0 0 10 10" fill="none" stroke="rgba(255,255,255,.8)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="1.5,5 4,7.5 8.5,2.5"/></svg></div>
+          Perfil de Instagram y Facebook
+        </div>
+        <div class="check-item">
+          <div class="check-icon"><svg viewBox="0 0 10 10" fill="none" stroke="rgba(255,255,255,.8)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="1.5,5 4,7.5 8.5,2.5"/></svg></div>
+          6 templates de posts para redes
+        </div>
+        <div class="check-item">
+          <div class="check-icon"><svg viewBox="0 0 10 10" fill="none" stroke="rgba(255,255,255,.8)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="1.5,5 4,7.5 8.5,2.5"/></svg></div>
+          Firma de email profesional
+        </div>
+        <div class="check-item">
+          <div class="check-icon"><svg viewBox="0 0 10 10" fill="none" stroke="rgba(255,255,255,.8)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="1.5,5 4,7.5 8.5,2.5"/></svg></div>
+          Archivos en todos los formatos
+        </div>
+      </div>
+      <div class="card-footer">
+        <div class="price-label">Inversión</div>
+        <div class="price"><sup>$</sup>1,800</div>
+        <div class="price-note">Pago único · Sin mensualidades</div>
+      </div>
+    </div>
+
+    <!-- AUTORIDAD -->
+    <div class="card">
+      <div class="card-header">
+        <span class="card-tag">Autoridad</span>
+        <div class="card-name">Sistema Completo</div>
+        <div class="card-desc">Para negocios que quieren competir a otro nivel y cerrar clientes grandes.</div>
+      </div>
+      <div class="card-body">
+        <div class="check-item">
+          <div class="check-icon"><svg viewBox="0 0 10 10" fill="none" stroke="#B33A2F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="1.5,5 4,7.5 8.5,2.5"/></svg></div>
+          Todo lo del paquete Crecimiento
+        </div>
+        <div class="check-item">
+          <div class="check-icon"><svg viewBox="0 0 10 10" fill="none" stroke="#B33A2F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="1.5,5 4,7.5 8.5,2.5"/></svg></div>
+          Company profile (4 páginas)
+        </div>
+        <div class="check-item">
+          <div class="check-icon"><svg viewBox="0 0 10 10" fill="none" stroke="#B33A2F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="1.5,5 4,7.5 8.5,2.5"/></svg></div>
+          Plantilla de propuesta comercial
+        </div>
+        <div class="check-item">
+          <div class="check-icon"><svg viewBox="0 0 10 10" fill="none" stroke="#B33A2F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="1.5,5 4,7.5 8.5,2.5"/></svg></div>
+          12 templates de posts para redes
+        </div>
+        <div class="check-item">
+          <div class="check-icon"><svg viewBox="0 0 10 10" fill="none" stroke="#B33A2F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="1.5,5 4,7.5 8.5,2.5"/></svg></div>
+          Guía de marca completa
+        </div>
+        <div class="check-item">
+          <div class="check-icon"><svg viewBox="0 0 10 10" fill="none" stroke="#B33A2F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="1.5,5 4,7.5 8.5,2.5"/></svg></div>
+          1 mes de soporte post-entrega
+        </div>
+        <div class="check-item">
+          <div class="check-icon"><svg viewBox="0 0 10 10" fill="none" stroke="#B33A2F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="1.5,5 4,7.5 8.5,2.5"/></svg></div>
+          Archivos en todos los formatos
+        </div>
+      </div>
+      <div class="card-footer">
+        <div class="price-label">Inversión</div>
+        <div class="price"><sup>$</sup>3,500</div>
+        <div class="price-note">Pago único · Sin mensualidades</div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="note">
+    <strong>Proceso de trabajo:</strong> Kickoff → 3 conceptos de diseño → revisiones hasta aprobación → entrega de archivos finales.<br/>
+    Todos los pagos se realizan 50% al inicio y 50% al entregar. <strong>Trabajamos 100% online.</strong>
+  </div>
+
+  <div class="footer">
+    <div class="footer-logo">GROWLY<span>•</span></div>
+    <div class="footer-contact">
+      growly-gamma.vercel.app &nbsp;·&nbsp;
+      <a href="https://wa.me/16194361819">+1 (619) 436-1819</a>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
