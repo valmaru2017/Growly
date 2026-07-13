@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { motion, useReducedMotion } from "framer-motion";
 import { whatsappHref } from "@/lib/contact";
+import { trackWhatsAppClick } from "@/lib/tracking";
 
 const EASE_OUT = [0.16, 1, 0.3, 1] as const;
 
@@ -70,6 +71,7 @@ function CTAButton({ href, children }: { href: string; children: string }) {
       href={href}
       target="_blank"
       rel="noopener noreferrer"
+      onClick={trackWhatsAppClick}
       className="font-general-sans inline-flex h-14 w-fit shrink-0 cursor-pointer items-center justify-center gap-3 whitespace-nowrap rounded-full bg-growly-accent px-6 text-[15px] font-semibold tracking-[-0.01em] text-white shadow-[0_1px_0_rgba(255,255,255,.04)_inset,0_10px_30px_rgba(0,0,0,.08)]"
       whileHover={{
         y: -2,
@@ -152,6 +154,7 @@ export default function Hero() {
             href={whatsappHref("Hola, quiero mi revisión gratuita")}
             target="_blank"
             rel="noopener noreferrer"
+            onClick={trackWhatsAppClick}
             className="font-general-sans inline-flex min-h-11 cursor-pointer items-center gap-1.5 text-[13px] font-semibold tracking-[-0.01em] text-foreground no-underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-growly-accent"
           >
             Contáctanos

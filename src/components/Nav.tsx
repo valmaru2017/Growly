@@ -1,4 +1,7 @@
+"use client";
+
 import { whatsappHref } from "@/lib/contact";
+import { trackWhatsAppClick } from "@/lib/tracking";
 
 export default function Nav() {
   return (
@@ -10,6 +13,7 @@ export default function Nav() {
         href={whatsappHref("Hola, quiero mi revisión gratuita")}
         target="_blank"
         rel="noopener noreferrer"
+        onClick={trackWhatsAppClick}
         className="font-general-sans inline-flex min-h-11 cursor-pointer items-center gap-1.5 text-[13px] font-semibold tracking-[-0.01em] text-foreground no-underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-growly-accent"
       >
         Contáctanos

@@ -1,4 +1,7 @@
+"use client";
+
 import { whatsappHref } from "@/lib/contact";
+import { trackWhatsAppClick } from "@/lib/tracking";
 
 export default function Footer() {
   return (
@@ -17,6 +20,7 @@ export default function Footer() {
           href={whatsappHref("Hola, quiero mi revisión gratuita")}
           target="_blank"
           rel="noopener noreferrer"
+          onClick={trackWhatsAppClick}
           className="inline-flex min-h-11 cursor-pointer items-center text-[13px] font-semibold text-foreground no-underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-growly-accent"
         >
           Escríbenos por WhatsApp

@@ -5,6 +5,7 @@ import { motion, useReducedMotion } from "framer-motion";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import { whatsappHref } from "@/lib/contact";
+import { trackWhatsAppClick } from "@/lib/tracking";
 
 const EASE = [0.16, 1, 0.3, 1] as const;
 
@@ -232,6 +233,7 @@ export default function PortfolioContent() {
                 href={whatsappHref("Hola, quiero mi revisión gratuita")}
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={trackWhatsAppClick}
                 className="font-general-sans inline-flex w-fit cursor-pointer items-center justify-center gap-3 whitespace-nowrap rounded-full bg-growly-accent text-[17px] font-medium tracking-[-0.01em] text-background shadow-[0_1px_0_rgba(255,255,255,.04)_inset,0_10px_30px_rgba(0,0,0,.25)]"
                 style={{ padding: "20px 44px" }}
                 whileHover={{

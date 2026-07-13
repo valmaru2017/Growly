@@ -2,6 +2,7 @@
 
 import { motion, useReducedMotion } from "framer-motion";
 import { whatsappHref } from "@/lib/contact";
+import { trackWhatsAppClick } from "@/lib/tracking";
 
 const EASE = [0.16, 1, 0.3, 1] as const;
 
@@ -47,6 +48,7 @@ export default function Contact() {
             href={whatsappHref("Hola, quiero mi revisión gratuita")}
             target="_blank"
             rel="noopener noreferrer"
+            onClick={trackWhatsAppClick}
             className="font-general-sans inline-flex h-14 w-fit cursor-pointer items-center justify-center gap-3 whitespace-nowrap rounded-full bg-growly-accent px-8 text-[15px] font-semibold tracking-[-0.01em] text-white shadow-[0_1px_0_rgba(255,255,255,.04)_inset,0_10px_30px_rgba(0,0,0,.08)]"
             whileHover={{
               y: -2,
