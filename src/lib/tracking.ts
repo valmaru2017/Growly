@@ -1,14 +1,17 @@
-export function trackWhatsAppClick() {
-  if (typeof window === "undefined") return;
+export const trackWhatsAppClick = () => {
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  // @ts-ignore
+  window.fbq?.('track', 'Lead', {
+    value: 20.00,
+    currency: 'USD',
+    content_name: 'WhatsApp KIT Click'
+  });
 
   // eslint-disable-next-line @typescript-eslint/ban-ts-comment
   // @ts-ignore
-  if (typeof window.fbq === "function") {
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    // @ts-ignore
-    window.fbq("track", "Lead");
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    // @ts-ignore
-    window.fbq("trackCustom", "WhatsAppClick");
-  }
-}
+  window.fbq?.('track', 'Contact');
+
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  // @ts-ignore
+  window.fbq?.('trackCustom', 'WhatsAppClick');
+};
