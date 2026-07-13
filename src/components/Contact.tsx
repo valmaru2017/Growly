@@ -15,19 +15,9 @@ export default function Contact() {
   const reduceMotion = useReducedMotion();
 
   return (
-    <>
-      {/* Cinematic transition — gray (previous section) to the grid background below */}
-      <div
-        aria-hidden="true"
-        className="h-[8vh] sm:h-[10vh] lg:h-[12vh]"
-        style={{
-          background: "linear-gradient(to bottom, #E4E3DF 0%, #f8f8f6 100%)",
-        }}
-      />
-
-      <section
-        id="contacto"
-        className="relative overflow-hidden bg-background px-6 pt-8 pb-16 sm:px-8 lg:px-12 lg:pt-12 lg:pb-28"
+    <section
+      id="contacto"
+      className="relative overflow-hidden bg-background px-6 pt-8 pb-16 sm:px-8 lg:px-12 lg:pt-12 lg:pb-28"
     >
       <div className="bg-grid pointer-events-none absolute inset-0 opacity-40" />
 
@@ -106,7 +96,6 @@ export default function Contact() {
           ))}
         </ul>
       </motion.div>
-      </section>
-    </>
+    </section>
   );
 }
